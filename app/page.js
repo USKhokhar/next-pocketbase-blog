@@ -23,11 +23,11 @@ export default async function Home(){
 
                     return(    
                         <Link style={{textDecoration: 'none'}} href={`/posts/${id}`}>
-                            <div className="post">
+                            <article className="post">
                                 <h3>{title}</h3>
                                 <sub>{subtitle}</sub>
                                 <p className="created">{created.slice(0, 10)}</p>
-                            </div>
+                            </article>
                         </Link>
                     )
                 }

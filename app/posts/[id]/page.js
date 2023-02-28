@@ -21,19 +21,17 @@ export default async function Post({params}){
     console.log(post.content)
     
     return(
-        <>
-        <h1>
-            {post.title}
-        </h1>
-        <h4>{post.subtitle}</h4>
-        <p className="created-post-page">Created On: {post.created.slice(0, 10)}</p>
-        <p className="updated">Last Updated: {post.updated.slice(0, 10)}</p>
-        <div className="content" 
-            dangerouslySetInnerHTML={{
-                __html: post.content
-            }}
-        />
-        </>
-        
+        <section className="blog-container">
+            <h2>{post.title}</h2>
+            <sub>{post.subtitle}</sub>
+            <p className="created">Created On : {post.created.slice(0, 10)}</p>
+            <p className="created">Last Updated : {post.updated.slice(0, 10)}</p>
+
+            <div className="content" 
+                dangerouslySetInnerHTML={{
+                    __html: post.content
+                }}
+            />
+        </section>
     )
 }
