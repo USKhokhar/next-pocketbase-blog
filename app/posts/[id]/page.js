@@ -25,9 +25,14 @@ export default async function Post({params}){
         <h1>
             {post.title}
         </h1>
-        <p>
-            {post.content}
-        </p>
+        <h4>{post.subtitle}</h4>
+        <p className="created-post-page">Created On: {post.created.slice(0, 10)}</p>
+        <p className="updated">Last Updated: {post.updated.slice(0, 10)}</p>
+        <div className="content" 
+            dangerouslySetInnerHTML={{
+                __html: post.content
+            }}
+        />
         </>
         
     )

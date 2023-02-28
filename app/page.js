@@ -15,16 +15,17 @@ export default async function Home(){
     // posts.map((post) => console.log(post.title))
     return(
         <>
-            <h1>Welcome to Home Page</h1>
-
+        <h1>Read Straight From dUSKy's Dusky Desk 💙 </h1>
             <div className="post-container">
             {
                 posts.map((post) => {
-                    const {id, title} = post
+                    const {id, title, subtitle, created} = post
 
                     return(    
                         <Link href={`/posts/${id}`}>
-                            <h5>{title}</h5>
+                            <h3>{title}</h3>
+                            <sub>{subtitle}</sub>
+                            <p className="created">{created.slice(0, 10)}</p>
                         </Link>
                     )
                 }

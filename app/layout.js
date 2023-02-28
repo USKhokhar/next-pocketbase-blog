@@ -1,4 +1,7 @@
 import Link from "next/link"
+import { Suspense } from "react"
+import Loading from "./posts/[id]/loading"
+import './global.css'
 
 export const metadata = {
   title: 'Next.js',
@@ -16,19 +19,27 @@ export default function RootLayout({ children }) {
 
           <nav>
             <ul>
-              <li>Read</li>
-              <li>About</li>
-              <li>Contact</li>
+              <Link href={'/'}>
+                <li>Read</li>
+              </Link>
+              <Link href={'/about'}>
+                <li>About</li>
+              </Link>
+              <Link href={'/contact'}>
+                <li>Contact</li>
+              </Link>
             </ul>
           </nav>
         </header>
 
-        {children}
+        <Suspense fallback={<Loading />}>
+          <main>
+            {children}
+          </main>
+        </Suspense>
       
         <footer>
-          © <Link href={'https://github.com/USKhokhar'} target='_blank'>
-            U.S.Khokhar
-          </Link>
+          Made with 💜 
         </footer>
       </body>
     </html>
