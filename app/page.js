@@ -22,10 +22,12 @@ export default async function Home(){
                     const {id, title, subtitle, created} = post
 
                     return(    
-                        <Link href={`/posts/${id}`}>
-                            <h3>{title}</h3>
-                            <sub>{subtitle}</sub>
-                            <p className="created">{created.slice(0, 10)}</p>
+                        <Link style={{textDecoration: 'none'}} href={`/posts/${id}`}>
+                            <div className="post">
+                                <h3>{title}</h3>
+                                <sub>{subtitle}</sub>
+                                <p className="created">{created.slice(0, 10)}</p>
+                            </div>
                         </Link>
                     )
                 }

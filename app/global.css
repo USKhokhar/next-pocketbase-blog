@@ -19,6 +19,10 @@
     --gray-x: hsl(0, 0%, 12%);
     --gray: hsl(228, 3%, 37%);
     --white-x: hsl(0, 0%, 64%);
+
+    /* GRADIENTS */
+    --grad-x: linear-gradient(30deg, hsl(228, 3%, 7%), hsl(0, 0%, 12%));
+    --grad-invt: linear-gradient(-30deg, hsl(228, 3%, 7%), hsl(0, 0%, 12%));
 }
 
 * {
@@ -26,6 +30,25 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
+}
+
+/* BREAKPOINT QUERIES */
+@media only screen and (min-width: 1280px) {
+    * {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    * {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (min-width: 400px) {
+    * {
+        font-size: 12px;
+    }
 }
 
 body {
@@ -38,7 +61,7 @@ header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 1rem;
+    padding: 5rem 1rem;
     height: 100vh;
     width: 30vw;
 }
@@ -55,10 +78,14 @@ header h1:hover {
 }
 
 /* NAVIGATION */
+nav {
+    /* align-self: flex-end; */
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    gap: 3rem;
+    gap: 5rem;
     flex-direction: column;
     padding: 2rem 4rem;
     border-right: 0.1rem solid var(--gray-x);
@@ -76,4 +103,64 @@ nav ul li {
 nav ul li:hover {
     color: var(--white-x);
     letter-spacing: 0;
+}
+
+/* MAIN */
+
+main {
+    /* border: 1px solid white; */
+    width: 70vw;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-direction: column;
+}
+
+.post-container {
+    /* align-items: flex-end;
+    border: 1px solid red; */
+    padding: 2rem 1rem;
+    width: 90%;
+    max-width: fit-content;
+}
+
+.post {
+    background: var(--grad-x);
+    outline: 1px solid var(--white);
+    border-radius: 16px;
+    padding: 2rem 3rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    transition-duration: 300ms;
+}
+
+.post:hover {
+    outline: none;
+    background: var(--grad-invt);
+}
+
+h1 {
+    font: normal 400 2rem/2rem var(--primary-font);
+    color: var(--white-x);
+    text-transform: capitalize;
+    padding: 2rem 1rem;
+}
+
+h3 {
+    font: normal 600 2rem/1.5rem var(--content-font);
+    color: var(--white);
+    letter-spacing: 0.1rem;
+}
+
+sub,
+.created {
+    font: normal 400 1rem/1rem var(--primary-font);
+    color: var(--white-x);
+}
+
+.created {
+    text-align: right;
 }

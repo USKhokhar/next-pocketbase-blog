@@ -31,9 +31,9 @@ export default function RootLayout({ children }) {
             </ul>
           </nav>
 
-          <Link style={{textDecoration: 'none'}} href={'https://github.com/USKhokhar'}>
+          {/* <Link style={{textDecoration: 'none'}} href={'https://github.com/USKhokhar'}>
             Made With 💜 
-          </Link>
+          </Link> */}
         </header>
 
         <Suspense fallback={<Loading />}>
