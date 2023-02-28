@@ -13,23 +13,27 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <header>
-          <Link href={'/'}>
-                <h1>Dusky Desk</h1>
-            </Link>
+          <Link style={{textDecoration: 'none'}} href={'/'}>
+            <h1>Dusky Desk</h1>
+          </Link>
 
           <nav>
             <ul>
-              <Link href={'/'}>
+              <Link style={{textDecoration: 'none'}} href={'/'}>
                 <li>Read</li>
               </Link>
-              <Link href={'/about'}>
+              <Link style={{textDecoration: 'none'}} href={'/about'}>
                 <li>About</li>
               </Link>
-              <Link href={'/contact'}>
+              <Link style={{textDecoration: 'none'}} href={'/contact'}>
                 <li>Contact</li>
               </Link>
             </ul>
           </nav>
+
+          <Link style={{textDecoration: 'none'}} href={'https://github.com/USKhokhar'}>
+            Made With 💜 
+          </Link>
         </header>
 
         <Suspense fallback={<Loading />}>
@@ -37,10 +41,6 @@ export default function RootLayout({ children }) {
             {children}
           </main>
         </Suspense>
-      
-        <footer>
-          Made with 💜 
-        </footer>
       </body>
     </html>
   )
