@@ -1,7 +1,7 @@
 import Link from "next/link"
 
 const getPosts = async () => {
-    const api = await fetch('http://127.0.0.1:8090/api/collections/posts/records', {
+    const api = await fetch(`${process.env.ADMIN_URL}/api/collections/posts/records`, {
         cache: 'no-cache'
     })
 

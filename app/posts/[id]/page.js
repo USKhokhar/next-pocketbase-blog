@@ -1,7 +1,7 @@
 
 
 async function getPost(id){
-    const api = await fetch(`http://127.0.0.1:8090/api/collections/posts/records/${id}`, {
+    const api = await fetch(`${process.env.ADMIN_URL}/api/collections/posts/records/${id}`, {
         next: { revalidate: 10 },
         headers:{
             'Content-Type': 'application/json'
@@ -18,7 +18,7 @@ export default async function Post({params}){
 
     const post = await getPost(params.id)
     // console.log(params.id)
-    console.log(post.content)
+    // console.log(post.content)
     
     return(
         <section className="blog-container">
