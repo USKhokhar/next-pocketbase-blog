@@ -220,6 +220,10 @@ sub,
 
         margin: auto;
     }
+
+    .post-container {
+        margin: auto;
+    }
 }
 
 
@@ -253,4 +257,14 @@ h2 {
 
         border: 1px solid white;
     }
+}
+
+/* LOADING */
+
+.loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    translate: -50% -50%;
 }

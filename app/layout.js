@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Suspense } from "react"
-import Loading from "./posts/[id]/loading"
+import Loading from "./loading"
 import './global.css'
 
 export const metadata = {
