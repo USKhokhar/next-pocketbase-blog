@@ -268,3 +268,22 @@ h2 {
 
     translate: -50% -50%;
 }
+
+/* ICONS */
+
+.connect {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+}
+
+.connect svg {
+    width: 5rem;
+    aspect-ratio: 1;
+}
+
+.connect svg:hover {
+    transition: 350ms;
+    scale: 0.7;
+}
